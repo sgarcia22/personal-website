@@ -2,26 +2,65 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>BlueBunnyGamer</title>
+		<title>BlueBunnyGamer</title>
 	<link rel="stylesheet" type="text/css" href="styleType.css">
+	<!-- Code from www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+		  // Prevent default anchor click behavior
+		  event.preventDefault();
+
+		  // Store hash
+		  var hash = this.hash;
+
+		  // Using jQuery's animate() method to add smooth page scroll
+		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 800, function(){
+
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		  });
+		} // End if
+	  });
+	});
+	</script>
+	 <style>
+	body, html, .main {
+		height: 100%;
+	}
+
+	section {
+		min-height: 100%;
+	}
+	</style>
 </head>
 <body>
 	<div id="content">
-		<h1>BlueBunnyGamer</h1>
 		<div id="nav">
+		  <div id="main">
+				<h1><a href="#" style="color:white; text-decoration: none">BlueBunnyGamer</a></h1> 
+			</div>
 		  <div id="nav-wrapper">
 				<ul>
-				  <li>Released Games</li>
-				  <li>Games for Fun</li>
-				  <li>About</li>
-				  <li>Contact</li>
+				  <li><a href="#released" style="color:white; text-decoration: none">Released Games</a></li>
+				  <li><a href="#fun" style="color:white; text-decoration: none">Games for Fun</a></li>
+				  <li><a href="#about" style="color:white; text-decoration: none">About</a></li>
+				  <li><a href="#contact" style="color:white; text-decoration: none">Contact</a></li>
 				</ul>
 		  </div>
 		</div>
 	</div>
-		<div id="released">
-		
-			<h2>Released</h2>
+		<div id="bbgcontent">
+			<div id="released">
+				<h2>Released</h2>
 				<h3>There is no Floor</h3>
 				<a href="https://play.google.com/store/apps/details?id=com.BlueBunnyGamer.ThereIsNoFloor&hl=en" target="_blank">
 					<img src="Images/EXE_ICON.png" alt="TINF Icon" style="width: 300px">
@@ -33,7 +72,9 @@
 				<a href="https://play.google.com/store/apps/details?id=com.BlueBunnyGamer.ThereIsNoFloor&hl=en" target="_blank">
 					<img src="Images/google_play.png" alt="Google Play" style="width: 300px">
 				</a>
-			<h2>Games for Fun</h2>
+			</div>
+			<div id="fun">
+				<h2>Games for Fun</h2>
 				<h3>First Person Frogger</h3>
 				<a href="https://bluebunnygamer.itch.io/first-person-frogger" target="_blank">
 					<img src="Images/Frogger_Cover.jpg" alt="FPF Icon" style="width: 400px; border-radius: 15px;">
@@ -56,30 +97,36 @@
 				<a href="https://bluebunnygamer.itch.io/hello-darkness" target="_blank">
 					<img src="Images/logo@2x.png" alt="itch.io" style="width: 300px;" >
 				</a>
-			<h2>About</h2>
+			</div>
+			<div id="about">
+				<h2>About</h2>
 				<p>I am a second-year Computer Science student who loves to code and make games.</p>
 				<p>Although I'm still a beginner, I plan on expanding my skill set immensely during college. </p>
 				<p>When I'm free I make YouTube videos, play games, and watch anime.</p>
 				<p>If you have any questions feel free to ask!</p>
-			<h2>Contact</h2>
+			</div>
+			<div id="contact">
+				<h2>Contact</h2>
 				<div id="social">
-					<a href="mailto:bluebunnygamer@gmail.com?Subject=Inquiry.BlueBunnyGamer" target="_blank">
+					<a href="mailto:bluebunnygamer@gmail.com?Subject=Inquiry.BlueBunnyGamer" target="_blank" style="text-decoration: none">
 						<img src="Images/email-logo.png" alt="bluebunnygamer@gmail.com" style="width: 100px;" >
 					</a>
-					<a href="https://www.youtube.com/channel/UC1VeFnWcQc_qnNND616IXuw" target="_blank">
-						<img src="Images/YouTube-icon-full_color.png" alt="YouTube" style="width: 100px; margin: 15px 10px 15px 22px;" >
+					<a href="https://www.youtube.com/channel/UC1VeFnWcQc_qnNND616IXuw" target="_blank" style="text-decoration: none">
+						<img src="Images/YouTube-icon-full_color.png" alt="YouTube" style="width: 100px; margin: 15px 10px 15px 30px;" >
 					</a>
-					<a href="https://twitter.com/BlueBunnyGamer" target="_blank">
+					<a href="https://twitter.com/BlueBunnyGamer" target="_blank" style="text-decoration: none">
 						<img src="Images/Twitter_Social_Icon_White.png" alt="Twitter" style="width: 100px; margin: 10px 10px;" >
 					</a>
-					<a href="http://steamcommunity.com/groups/BBGFG" target="_blank">
-						<img src="Images/steam_logo.ico" alt="Steam" style="width: 80px; margin: 10px;" >
+					<a href="http://steamcommunity.com/groups/BBGFG" target="_blank" style="text-decoration: none">
+						<img src="Images/steam_logo.ico" alt="Steam" style="width: 80px; margin: 10px 10px 10px 10px;" >
 					</a>
-					<a href="https://bluebunnygamer.itch.io/" target="_blank">
-						<img src="Images/itch_app_icon.png" alt="itch.io" style="width: 80px; margin: 10px;" >
+					<a href="https://www.facebook.com/bluebunnygamer/" target="_blank" style="text-decoration: none">
+						<img src="Images/facebook_thumbs.png" alt="Steam" style="width: 100px; margin: 10px 10px 10px 10px;" >
 					</a>
 				</div>
-				<hr>
+			</div>
+		<hr>
 	</div>
+						
 </body>
 </html>
